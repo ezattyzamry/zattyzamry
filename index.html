@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me</title>
+  <style>
+    body {
+      font-family: 'Arial Black', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(45deg, #FBD0D6, #FCF695);
+      color: #555;
+    }
+
+    header {
+      text-align: center;
+      padding: 1rem;
+      background-color: rgba(255, 255, 255, 0.8);
+      box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      font-size: 2rem;
+      margin: 0;
+    }
+
+    header p {
+      font-size: 1rem;
+    }
+
+    header .date-time {
+      font-size: 1rem;
+      color: #7b4ca0;
+      margin-top: 1rem;
+    }
+
+    .content {
+      padding: 2rem;
+      max-width: 1300px;
+      margin: 0 auto;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .content h2 {
+      font-size: 2rem;
+      text-align: center;
+    }
+
+    .content p {
+      line-height: 1.8;
+      font-size: 1rem;
+      text-align: justify;
+    }
+
+    .button-container {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .button-container a {
+      display: inline-block;
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      color: #fff;
+      background-color: #7b4ca0;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .button-container a:hover {
+      background-color: #5b3682;
+      transform: rotate(-2deg) scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 2rem;
+      padding: 1rem;
+      background-color: rgba(255, 255, 255, 0.8);
+      box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    footer p {
+      font-size: 0.9rem;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <marquee width="100%">
+      <h1>WELCOME TO MY SPACE</h1>
+    </marquee>
+    <p>Get to know about me!</p>
+    <p class="date-time"></p>
+  </header>
+
+  <div class="content">
+    <h2>About Me</h2>
+    <p>
+I’m a final-year student at UiTM, majoring in Information Management under the Faculty of Information Management. My academic journey has been shaped by a strong interest in the organization, preservation, and dissemination of information, particularly in modern digital landscapes.
+These efforts reflect my passion for both academic research and creative expression.
+I believe in continuous learning and am always eager to embrace new opportunities that allow me to grow and make a positive impact.
+</p>
+      <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin: 20px auto; /* Centers the table horizontally */
+        }
+        td {
+            border: 5px solid #ddd;
+            text-align: center;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <table>
+        <tbody>
+            <tr>
+                <td>FULL NAME</td>
+                <td>Nurul Ezatty binti Zamry</td>
+            </tr>
+            <tr>
+                <td>AGE</td>
+                <td>20 years old</td>
+            </tr>
+            <tr>
+                <td>PLACE OF BIRTH</td>
+                <td>Batu Pahat, Johor</td>
+            </tr>
+            <tr>
+                <td>DATE OF BIRTH</td>
+                <td>20 February 2004</td>
+            </tr>
+            <tr>
+                <td>RACE</td>
+                <td>Malay</td>
+            </tr>
+            <tr>
+                <td>RELIGION</td>
+                <td>Muslim</td>
+            </tr>
+        </tbody>
+    </table>
+
+    </p>
+
+    <div class="button-container">
+      <a href="interest.html" class="btn">See More</a>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2024 Ezatty. All Rights Reserved.</p>
+    <p>Contact me through: 
+        <p>    
+            <a href="https://www.instagram.com/ezattyzamry/"target="_blank">Instagram</a>
+            <a href="https://www.facebook.com/ezattyzamry/"target="_blank">Facebook</a>
+            <a href="https://www.linkedin.com/in/nurul-ezatty-308758328/"target="_blank">LinkedIn</a>
+            <a href="https://vsco.co/dlwkel/gallery"target="_blank">VSCO</a>
+        </p>
+        </p>
+  </footer>
+
+  <script>
+    // Date and time display
+    function updateDateTime() {
+      const now = new Date();
+      const day = String(now.getDate()).padStart(2, '0');
+      const month = String(now.getMonth() + 1).padStart(2, '0'); // Months are zero-indexed
+      const year = now.getFullYear();
+      const hours = String(now.getHours()).padStart(2, '0');
+      const minutes = String(now.getMinutes()).padStart(2, '0');
+      const seconds = String(now.getSeconds()).padStart(2, '0');
+      const dateTime = `${day}/${month}/${year} ${hours}:${minutes}:${seconds}`;
+      document.querySelector('.date-time').textContent = dateTime;
+    }
+
+    setInterval(updateDateTime, 1000);
+  </script>
+</body>
+</html>
+
